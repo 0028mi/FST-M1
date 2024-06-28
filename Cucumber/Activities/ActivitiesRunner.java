@@ -8,13 +8,8 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
     features = "src/test/java/features",
     glue = {"stepDefinitions"},
-    publish = true,
-    plugin = {
-    	    	"pretty",
-    	    	"html:src/reports/HTML_Reort.html",
-    	    	"json:src/reports/JSON_Report.json",
-    	    	"junit:src/reports/XML_Report.xml"
-    	    },
+    tags = "@SimpleAlert",
+    plugin = {"json: test-report/json-report.json"},
     monochrome = true
 )
 
